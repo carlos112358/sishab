@@ -3,32 +3,32 @@ package tech.ada.sishab.io;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public record ObraSisHab(Integer id,
-                         String txtUf,
-                         String txtMunicipio,
-                         String txtSituacaoObra,
-                         String txtOrigemContrato,
-                         String txtPrograma,
-                         String txtModalidadePrograma,
-                         String txtFaixaGrupoRenda,
-                         String txtApfCodEmpreendimento,
-                         String txtNomeEmpreendimento,
-                         String txtAgenteFinanceiro,
-                         LocalDate dteAssinaturaContrato,
-                         Integer numAnoAssinaturaContrato,
-                         Double prcObra,
-                         Double vlrOperacao,
-                         Double vlrContrapartida,
-                         Double vlrLiberado,
-                         LocalDate dteMaxLiberacao,
-                         Integer qtdUhContratadas,
-                         Integer qtdUhEntregues,
-                         String txtCnpjProponente,
-                         String txtRazaoSocialProponente,
-                         String txtEndereco,
-                         String txtCep,
-                         String txtTipologia) implements Comparable<ObraSisHab> {
-    public ObraSisHab(Integer id, String txtUf, String txtMunicipio, String txtSituacaoObra, String txtOrigemContrato, String txtPrograma, String txtModalidadePrograma, String txtFaixaGrupoRenda, String txtApfCodEmpreendimento, String txtNomeEmpreendimento, String txtAgenteFinanceiro, LocalDate dteAssinaturaContrato, Integer numAnoAssinaturaContrato, Double prcObra, Double vlrOperacao, Double vlrContrapartida, Double vlrLiberado, LocalDate dteMaxLiberacao, Integer qtdUhContratadas, Integer qtdUhEntregues, String txtCnpjProponente, String txtRazaoSocialProponente, String txtEndereco, String txtCep, String txtTipologia) {
+public record ObraSisHabRecord(Integer id,
+                               String txtUf,
+                               String txtMunicipio,
+                               String txtSituacaoObra,
+                               String txtOrigemContrato,
+                               String txtPrograma,
+                               String txtModalidadePrograma,
+                               String txtFaixaGrupoRenda,
+                               String txtApfCodEmpreendimento,
+                               String txtNomeEmpreendimento,
+                               String txtAgenteFinanceiro,
+                               LocalDate dteAssinaturaContrato,
+                               Integer numAnoAssinaturaContrato,
+                               Double prcObra,
+                               Double vlrOperacao,
+                               Double vlrContrapartida,
+                               Double vlrLiberado,
+                               LocalDate dteMaxLiberacao,
+                               Integer qtdUhContratadas,
+                               Integer qtdUhEntregues,
+                               String txtCnpjProponente,
+                               String txtRazaoSocialProponente,
+                               String txtEndereco,
+                               String txtCep,
+                               String txtTipologia) implements Comparable<ObraSisHabRecord> {
+    public ObraSisHabRecord(Integer id, String txtUf, String txtMunicipio, String txtSituacaoObra, String txtOrigemContrato, String txtPrograma, String txtModalidadePrograma, String txtFaixaGrupoRenda, String txtApfCodEmpreendimento, String txtNomeEmpreendimento, String txtAgenteFinanceiro, LocalDate dteAssinaturaContrato, Integer numAnoAssinaturaContrato, Double prcObra, Double vlrOperacao, Double vlrContrapartida, Double vlrLiberado, LocalDate dteMaxLiberacao, Integer qtdUhContratadas, Integer qtdUhEntregues, String txtCnpjProponente, String txtRazaoSocialProponente, String txtEndereco, String txtCep, String txtTipologia) {
         this.id = id;
         this.txtUf = txtUf;
         this.txtMunicipio = txtMunicipio;
@@ -88,7 +88,7 @@ public record ObraSisHab(Integer id,
     }
 
     @Override
-    public int compareTo(ObraSisHab o) {
+    public int compareTo(ObraSisHabRecord o) {
 
         int comparacao = numAnoAssinaturaContrato.compareTo(o.numAnoAssinaturaContrato);
 
@@ -104,7 +104,7 @@ public record ObraSisHab(Integer id,
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ObraSisHab that = (ObraSisHab) o;
+        ObraSisHabRecord that = (ObraSisHabRecord) o;
         return Objects.equals(txtUf, that.txtUf) && Objects.equals(txtMunicipio, that.txtMunicipio) && Objects.equals(txtSituacaoObra, that.txtSituacaoObra) && Objects.equals(txtOrigemContrato, that.txtOrigemContrato) && Objects.equals(txtPrograma, that.txtPrograma) && Objects.equals(txtModalidadePrograma, that.txtModalidadePrograma) && Objects.equals(txtFaixaGrupoRenda, that.txtFaixaGrupoRenda) && Objects.equals(txtApfCodEmpreendimento, that.txtApfCodEmpreendimento) && Objects.equals(txtNomeEmpreendimento, that.txtNomeEmpreendimento) && Objects.equals(txtAgenteFinanceiro, that.txtAgenteFinanceiro) && Objects.equals(dteAssinaturaContrato, that.dteAssinaturaContrato) && Objects.equals(numAnoAssinaturaContrato, that.numAnoAssinaturaContrato) && Objects.equals(prcObra, that.prcObra) && Objects.equals(vlrOperacao, that.vlrOperacao) && Objects.equals(vlrContrapartida, that.vlrContrapartida) && Objects.equals(vlrLiberado, that.vlrLiberado) && Objects.equals(dteMaxLiberacao, that.dteMaxLiberacao) && Objects.equals(qtdUhContratadas, that.qtdUhContratadas) && Objects.equals(qtdUhEntregues, that.qtdUhEntregues) && Objects.equals(txtCnpjProponente, that.txtCnpjProponente) && Objects.equals(txtRazaoSocialProponente, that.txtRazaoSocialProponente) && Objects.equals(txtEndereco, that.txtEndereco) && Objects.equals(txtCep, that.txtCep) && Objects.equals(txtTipologia, that.txtTipologia);
     }
 
