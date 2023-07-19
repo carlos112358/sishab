@@ -110,6 +110,6 @@ public record ObraSisHabRecord(Integer id,
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, txtUf, txtMunicipio, txtSituacaoObra, txtOrigemContrato, txtPrograma, txtModalidadePrograma, txtFaixaGrupoRenda, txtApfCodEmpreendimento, txtNomeEmpreendimento, txtAgenteFinanceiro, dteAssinaturaContrato, numAnoAssinaturaContrato, prcObra, vlrOperacao, vlrContrapartida, vlrLiberado, dteMaxLiberacao, qtdUhContratadas, qtdUhEntregues, txtCnpjProponente, txtRazaoSocialProponente, txtEndereco, txtCep, txtTipologia);
+        return Objects.hash(txtUf, txtMunicipio, txtSituacaoObra, txtOrigemContrato, txtPrograma, txtModalidadePrograma, txtFaixaGrupoRenda, txtApfCodEmpreendimento, txtNomeEmpreendimento, txtAgenteFinanceiro, dteAssinaturaContrato, numAnoAssinaturaContrato, prcObra, vlrOperacao, vlrContrapartida, vlrLiberado, dteMaxLiberacao, qtdUhContratadas, qtdUhEntregues, txtCnpjProponente, txtRazaoSocialProponente, txtEndereco, txtCep, txtTipologia);
     }
 }
