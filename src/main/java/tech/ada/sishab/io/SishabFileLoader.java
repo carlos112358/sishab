@@ -30,7 +30,7 @@ public class SishabFileLoader {
             while ((linha = br.readLine()) != null) {
 
                 String[] dados = linha.split("\\|");//gotta escape cause String.split() uses regex
-                System.out.println(id+1);
+//                System.out.println(id+1);
 
                 String txtUf = dados[0].trim();
                 String txtMunicipio = dados[1].trim();
